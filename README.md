@@ -1,6 +1,6 @@
 # jeasecms_newversion
 
-Jease CMS plugins examples
+Jease CMS plugin examples
 
 
 -LDAP auth
