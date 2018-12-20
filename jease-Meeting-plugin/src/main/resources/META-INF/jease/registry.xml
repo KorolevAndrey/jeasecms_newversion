@@ -1,0 +1,10 @@
+<jease>
+
+  <component>
+    <domain>custom.Meeting</domain>
+    <editor>custom.MeetingEditor</editor>
+    <icon>~./jease/cms/Image.png</icon>
+    <view>/site/domain/test.zul</view>
+  </component>
+
+</jease>

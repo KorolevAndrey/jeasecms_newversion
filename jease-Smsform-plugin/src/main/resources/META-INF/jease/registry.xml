@@ -1,0 +1,10 @@
+<jease>
+
+  <component>
+    <domain>custom.Smsform</domain>
+    <editor>custom.SmsformEditor</editor>
+    <icon>~./jease/cms/Image.png</icon>
+    <view>/site/domain/test1.zul</view>
+  </component>
+
+</jease>

@@ -1,0 +1,45 @@
+<zk>
+
+
+<zscript>
+
+    import custom.Smsform;
+    import javax.servlet.http.HttpServletRequest;
+    import org.zkoss.zk.ui.Executions;
+
+    HttpServletRequest request = (HttpServletRequest) Executions.getCurrent().getNativeRequest();
+    Smsform m = (Smsform) request.getAttribute("Node");
+
+</zscript>
+
+    <window apply="org.zkoss.bind.BindComposer"
+            viewModel="@id('vm')@init('custom.MyViewModel1')"
+            validationMessages="@id('vmsgs')">
+
+        <!--hlayout>count: <label value="@load(vm.count)" /></hlayout>
+        <hlayout>number: <intbox value="@bind(vm.cc)" /></hlayout-->
+
+    <grid width="100%">
+        <columns>
+            <column width="30%" label="" />
+            <column width="70%" label="" />
+        </columns>
+        <rows>
+        <row>
+        Номер телефона (79ххххххххх): 
+	        <cell>
+			<textbox width="100%" value="@bind(vm.ani)" />
+		</cell>
+	</row>
+        <row>
+        Текст СМС: 
+        	<cell>
+			<textbox width="100%" height="200px" value="@bind(vm.text)" multiline="true"/>
+	        </cell>
+	</row>
+	</rows>
+    </grid>
+    <button label="Отправить SMS" onClick="@command('cmd')"/>
+    </window>
+
+</zk>
