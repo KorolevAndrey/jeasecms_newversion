@@ -68,17 +68,17 @@ public class SMS {
             LOGGER.info( "2" );
             javax.jms.Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
             LOGGER.info( "3" );
-            javax.jms.Destination destination = session.createQueue("jms_smsOrderQueue");
+            javax.jms.Destination destination = session.createQueue("");
             LOGGER.info( "4" );
             javax.jms.MessageProducer messageProducer = session.createProducer(destination);
             javax.jms.MapMessage message = session.createMapMessage();
             LOGGER.info( "5" );
-            message.setString("ani", ani);
-            message.setString("text", text);
-            message.setString("smshost", smshost);
-            message.setString("smsport", smsport);
-            message.setString("smsuser", smsuser);
-            message.setString("smspass", smspass);
+            message.setString("", ani);
+            message.setString("", text);
+            message.setString("", smshost);
+            message.setString("", smsport);
+            message.setString("", smsuser);
+            message.setString("", smspass);
 
             LOGGER.info( "6" );
             messageProducer.send(message);
